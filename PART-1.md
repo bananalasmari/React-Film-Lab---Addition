@@ -121,4 +121,4 @@ Since the poster requires you to create the URL first, move those elements to th
 
 #### PART 1 Complete!
 
-![](https://i.imgur.com/JdVta3i.png)
+![](https://i.imgur.com/JdVta3i.png) 
