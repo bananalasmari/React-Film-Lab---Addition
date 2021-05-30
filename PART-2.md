@@ -12,8 +12,13 @@ Your goal today is to add some events to your app. You'll keep the events simple
 ### Tasks - Part 1: Adding Favorites
 
 #### Step 1: Add a new `Fave` component
+First include a single line of HTML just before the closing body tag in public/index.html
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+```
+to set up icon fonts for use in any web page is through `Google Web Fonts`.
 
-Create a new component called `Fave` that will eventually handle whether a movie is a user's favorite. The `Fave` component's `render` method should return the following:
+Then, Create a new component called `Fave` that will eventually handle whether a movie is a user's favorite. The `Fave` component's `render` method should return the following:
 
 ```html
 <div className="film-row-fave add_to_queue">
