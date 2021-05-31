@@ -9,7 +9,7 @@ You're almost finished! Now, You need to:
 - Show the details of each movie by getting this information from TMDB.
 - Refactor your React app to make it as clean as possible.
 
-![Blade Runner](assets/bladerunner.png)
+![Blade Runner](bladerunner.png)
 
 ### Task 1: Adding the API call
 
