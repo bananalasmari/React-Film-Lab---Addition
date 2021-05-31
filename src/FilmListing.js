@@ -16,10 +16,27 @@ class FilmListing extends React.Component {
         });
     };
 
-    render() {
-        const allFilms = this.props.films.map(film => {
-            return <FilmRow key={film.id} film={film} />;
+    generateFilmsList = filmsToDisplay => {
+        const allFilms = filmsToDisplay.map(film => {
+            return (
+                <FilmRow
+                    key={film.id}
+                    film={film}
+                    onFaveToggle={() => this.props.onFaveToggle(film)}
+                    isFave={this.props.faves.includes(film)}
+                    onShowDetails={() => this.props.onShowDetails(film)}
+                />
+            );
         });
+
+        return allFilms;
+    };
+
+    render() {
+        const allFilms =
+            this.state.filter === "all"
+                ? this.generateFilmsList(this.props.films)
+                : this.generateFilmsList(this.props.faves);
 
         return (
             <div className="film-list">
@@ -43,7 +60,9 @@ class FilmListing extends React.Component {
                         onClick={() => this.handleFilterClick("faves")}
                     >
                         FAVES
-                        <span className="section-count">0</span>
+                        <span className="section-count">
+                            {this.props.faves.length}
+                        </span>
                     </div>
                 </div>
 
